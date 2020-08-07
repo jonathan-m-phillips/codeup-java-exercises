@@ -42,6 +42,15 @@ public class HelloWorld {
         b *= a;
         System.out.println(b);
 
+        int c = 10;
+        int d = 2;
+        // x = x / y; same as below
+        c /= d;
+        System.out.println(c);
+        // d = d - c; same as below
+        d -= c;
+        System.out.println(d);
+
 
         // If you assign a value to a numerical variable that is larger than the type can hold,
         //   you will receive an error. If you increment a numeric variable past the capacity,
