@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         // 1: Loop Basics
 
@@ -51,20 +54,46 @@ public class ControlFlowExercises {
 //        }
 
         // 2: FizzBuzz
-        for (int i = 1; i <= 100; i++) {
-            if(i % 3 == 0) {
-                if (i % 5 == 0) {
-                    System.out.println("FizzBuzz");
-                } else {
-                    System.out.println("Fizz");
-                }
-            } else if(i % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
-        }
+//        for (int i = 1; i <= 100; i++) {
+//            if(i % 3 == 0) {
+//                if (i % 5 == 0) {
+//                    System.out.println("FizzBuzz");
+//                } else {
+//                    System.out.println("Fizz");
+//                }
+//            } else if(i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
 
+        // 3: Display a table of powers
+        boolean userInput = true;
+
+        do {
+
+            System.out.println("What number would you like to go up to? ");
+            String num1 = scanner.next();
+            int userNum = Integer.parseInt(num1);
+            int number = 1;
+
+            System.out.println("\nnumber | squared | cubed\n------ | ------- | -----");
+
+            do {
+                int squared = number * number;
+                int cubed = number * number * number;
+                System.out.printf("%d\t   | %d\t     | %d\n", number, squared, cubed);
+                number++;
+            } while (number <= userNum);
+
+            System.out.println("\nDo you want to give another number? y/n");
+            String playAgain = scanner.next();
+            if (playAgain.equals("n")) {
+                userInput = false;
+            }
+
+        } while (userInput);
 
     }
 }
