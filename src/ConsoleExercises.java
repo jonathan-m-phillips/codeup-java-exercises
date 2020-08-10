@@ -34,32 +34,32 @@ public class ConsoleExercises {
 
 
         // taking 3 user input words and displaying them separately
-        System.out.println("\nEnter three words: ");
-        String wordOne = scanner.next();
-        String wordTwo = scanner.next();
-        String wordThree = scanner.next();
-        System.out.printf("First word: %s, Second word: %s, Third word: %s.", wordOne, wordTwo, wordThree);
-
-
-        // prompting user for sentence and returning it back
-        System.out.println("\nEnter a sentence: ");
-        String userSentence = scanner.nextLine();
-        System.out.println("\nYou entered:" + userSentence);
-
-
-//        // giving area and perimeter of a room
-//        System.out.println("\nEnter length of your room in feet: ");
-//        String lengthOfRoom = scanner.next();
-//        int length = Integer.parseInt(lengthOfRoom);
+//        System.out.println("\nEnter three words: ");
+//        String wordOne = scanner.next();
+//        String wordTwo = scanner.next();
+//        String wordThree = scanner.nextLine();
+//        System.out.printf("First word: %s, Second word: %s, Third word: %s.", wordOne, wordTwo, wordThree);
 //
-//        System.out.println("Enter width of your room in feet: ");
-//        String widthOfRoom = scanner.next();
-//        int width = Integer.parseInt(widthOfRoom);
 //
-//        int area = length * width;
-//        int perimeter = (length * 2) + (width * 2);
-//
-//        System.out.printf("\nThe area of your room is: %d feet.\nThe perimeter of your room is: %d feet.", area, perimeter);
+//        // prompting user for sentence and returning it back
+//        System.out.println("\nEnter a sentence: ");
+//        String userSentence = scanner.nextLine();
+//        System.out.println("\nYou entered:" + userSentence);
+
+
+        // giving area and perimeter of a room
+        System.out.println("\nEnter length of your room in feet: ");
+        String lengthOfRoom = scanner.next();
+        int length = Integer.parseInt(lengthOfRoom);
+
+        System.out.println("Enter width of your room in feet: ");
+        String widthOfRoom = scanner.next();
+        int width = Integer.parseInt(widthOfRoom);
+
+        int area = length * width;
+        int perimeter = (length * 2) + (width * 2);
+
+        System.out.printf("\nThe area of your room is: %d feet.\nThe perimeter of your room is: %d feet.", area, perimeter);
 
     }
 }
