@@ -5,10 +5,11 @@ public class ConsoleExercises {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        // scanner.useDelimiter("\n");
 
         // printing pi
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %4.2f.", pi);
+        System.out.printf("The value of pi is approximately %.2f.", pi);
 
 
         // taking user input and parsing it as an integer
@@ -44,7 +45,7 @@ public class ConsoleExercises {
         // prompting user for sentence and returning it back
         System.out.println("\nEnter a sentence: ");
         String userSentence = scanner.nextLine();
-        System.out.println("\nYou entered:" + userSentence);
+        System.out.printf("\nYou entered:\n%s", userSentence);
 
 
         // giving area and perimeter of a room
@@ -64,7 +65,8 @@ public class ConsoleExercises {
         double perimeter = (length * 2) + (width * 2);
         double volume = length * width * height;
 
-        System.out.printf("\nThe area of your room is: %6.2f feet.\nThe perimeter of your room is: %6.2f feet.\nThe volume of the room is: %6.2f.", area, perimeter, volume);
+        System.out.printf("\nThe area of your room is: %.2f sq ft.\nThe perimeter of your room is: %.2f feet.\nThe volume of the room is: %.2f cu ft.", area, perimeter, volume);
+
 
     }
 }
