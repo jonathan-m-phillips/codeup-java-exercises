@@ -8,92 +8,92 @@ public class ControlFlowExercises {
 
 
         // a: While
-//        int i = 5;
-//
-//        while(i <= 15) {
-//            System.out.println(i);
-//            i++;
-//        }
-//
-//
-//        // b: Do While
-//        int j = 0;
-//        do {
-//            System.out.println(j);
-//            j += 2;
-//        } while (j <= 100);
-//
-//        int k = 100;
-//        do {
-//            System.out.println(k);
-//            k -= 5;
-//        } while (k >=-10);
-//
-//        long m = 2;
-//        do {
-//            System.out.println(m);
-//            m = m * m;
-//        } while(m <= 1000000);
-//
-//
-//        // c: For
-//        for (int i = 5; i <= 15; i++) {
-//            System.out.println(i);
-//        }
-//
-//        for(int i = 0; i <= 100; i += 2){
-//            System.out.println(i);
-//        }
-//
-//        for (int i = 100; i >= -10; i -= 5) {
-//            System.out.println(i);
-//        }
-//
-//        for (long i = 2; i <= 1000000; i *= i) {
-//            System.out.println(i);
-//        }
+        int i = 5;
+
+        while(i <= 15) {
+            System.out.println(i);
+            i++;
+        }
+
+
+        // b: Do While
+        int j = 0;
+        do {
+            System.out.println(j);
+            j += 2;
+        } while (j <= 100);
+
+        int k = 100;
+        do {
+            System.out.println(k);
+            k -= 5;
+        } while (k >=-10);
+
+        long m = 2;
+        do {
+            System.out.println(m);
+            m = m * m;
+        } while(m <= 1000000);
+
+
+        // c: For
+        for (int l = 5; l <= 15; l++) {
+            System.out.println(l);
+        }
+
+        for(int n = 0; n <= 100; n += 2){
+            System.out.println(n);
+        }
+
+        for (int o = 100; o >= -10; o -= 5) {
+            System.out.println(o);
+        }
+
+        for (long p = 2; p <= 1000000; p *= i) {
+            System.out.println(p);
+        }
 
         // 2: FizzBuzz
-//        for (int i = 1; i <= 100; i++) {
-//            if(i % 3 == 0) {
-//                if (i % 5 == 0) {
-//                    System.out.println("FizzBuzz");
-//                } else {
-//                    System.out.println("Fizz");
-//                }
-//            } else if(i % 5 == 0) {
-//                System.out.println("Buzz");
-//            } else {
-//                System.out.println(i);
-//            }
-//        }
+        for (int q = 1; q <= 100; q++) {
+            if(q % 3 == 0) {
+                if (q % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else {
+                    System.out.println("Fizz");
+                }
+            } else if(q % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(q);
+            }
+        }
 
         // 3: Display a table of powers
-//        boolean userInput = true;
-//
-//        do {
-//
-//            System.out.println("What number would you like to go up to? ");
-//            String num1 = scanner.next();
-//            int userNum = Integer.parseInt(num1);
-//            int number = 1;
-//
-//            System.out.println("\nnumber | squared | cubed\n------ | ------- | -----");
-//
-//            do {
-//                int squared = number * number;
-//                int cubed = number * number * number;
-//                System.out.printf("%d\t   | %d\t     | %d\n", number, squared, cubed);
-//                number++;
-//            } while (number <= userNum);
-//
-//            System.out.println("\nDo you want to give another number? y/n");
-//            String playAgain = scanner.next();
-//            if (playAgain.equals("n")) {
-//                userInput = false;
-//            }
-//
-//        } while (userInput);
+        boolean userInput = true;
+
+        do {
+
+            System.out.println("What number would you like to go up to? ");
+            String num1 = scanner.next();
+            int userNum = Integer.parseInt(num1);
+            int number = 1;
+
+            System.out.println("\nnumber | squared | cubed\n------ | ------- | -----");
+
+            do {
+                int squared = number * number;
+                int cubed = number * number * number;
+                System.out.printf("%d\t   | %d\t     | %d\n", number, squared, cubed);
+                number++;
+            } while (number <= userNum);
+
+            System.out.println("\nDo you want to give another number? y/n");
+            String playAgain = scanner.next();
+            if (playAgain.equals("n")) {
+                userInput = false;
+            }
+
+        } while (userInput);
 
 
         // 4: Convert given number grades into letter grades
