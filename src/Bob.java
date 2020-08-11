@@ -16,17 +16,12 @@ public class Bob {
 
 
         do {
-            System.out.println("Do you want to talk to Bob? y/n ");
-            String userAnswer = scanner.nextLine();
-            if (userAnswer.equals("n")) {
-                break;
-            }
-            System.out.println("Say something to Bob.");
+            System.out.println("Say something to Bob, \"n\" to break. ");
             String talkingToBob = scanner.nextLine();
             String bobResponse = "";
 
             if (talkingToBob.endsWith("?")) {
-                bobResponse += "sure";
+                bobResponse += "Sure.";
                 System.out.println(bobResponse);
             } else if (talkingToBob.endsWith("!")) {
                 bobResponse += "Whoa, chill out!";
@@ -34,6 +29,8 @@ public class Bob {
             } else if (talkingToBob.length() == 0) {
                 bobResponse += "Fine. Be that way!";
                 System.out.println(bobResponse);
+            } else if (talkingToBob.equals("n")) {
+                talk = false;
             } else {
                 bobResponse += "Whatever.";
                 System.out.println(bobResponse);
