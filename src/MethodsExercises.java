@@ -14,26 +14,27 @@ public class MethodsExercises {
 
         System.out.println(remainder(17, 3));
 
-
         System.out.println(getInteger(1, 10));
+
+        System.out.println(factorial(1));
 
     }
 
     // 1: Basic Arithmetic
-    public static double addition (double num1, double num2) {
+    public static double addition(double num1, double num2) {
         return num1 + num2;
     }
 
-    public static double subtraction (double num1, double num2) {
+    public static double subtraction(double num1, double num2) {
         return num1 - num2;
     }
 
-    public static double multiplication (double num1, double num2) {
+    public static double multiplication(double num1, double num2) {
         return num1 * num2;
     }
 
 
-    public static Serializable division (double num1, double num2) {
+    public static Serializable division(double num1, double num2) {
         String undefined = "undefined";
         if (num2 == 0) {
             return undefined;
@@ -43,14 +44,13 @@ public class MethodsExercises {
 
     }
 
-    public static double remainder (double num1, double num2) {
+    public static double remainder(double num1, double num2) {
         return num1 % num2;
     }
 
 
-
     // 2: Create a method that validates that user input is in a certain range
-    public static int getInteger (int min, int max) {
+    public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 10: ");
         String userInput = scanner.next();
@@ -73,4 +73,37 @@ public class MethodsExercises {
     }
 
 
+    // 3: Calculate the factorial of a number
+    public static String factorial(long num) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean userAgain = true;
+
+        do {
+            System.out.println("Enter a number from 1 to 59");
+            String userInput = scanner.nextLine();
+            long userNum = Integer.parseInt(userInput);
+            long fact = 1;
+            System.out.printf("%s! = ", userInput);
+            for (int i = 1; i <= userNum; i++) {
+                fact *= i;
+                if (i < userNum) {
+                    System.out.printf("%d X ", i);
+                } else if (i >= userNum) {
+                    System.out.printf("%d \t = ", i);
+                }
+            }
+            System.out.println(fact);
+            System.out.println("Do you want to enter another number? y/n: ");
+            String yesOrNo = scanner.nextLine();
+            if (yesOrNo.equals("n")) {
+                userAgain = false;
+            }
+        } while (userAgain);
+        return "Goodbye";
+    }
+
+
 }
+
+
