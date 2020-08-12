@@ -2,6 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class MethodsExercises {
+
     public static void main(String[] args) {
 
         System.out.println(addition(1, 2));
@@ -16,8 +17,10 @@ public class MethodsExercises {
 
         System.out.println(getInteger(1, 10));
 
-        System.out.println(factorial(1));
+        System.out.println(factorial());
 
+        System.out.println(diceRoll());
+//
     }
 
     // 1: Basic Arithmetic
@@ -74,7 +77,7 @@ public class MethodsExercises {
 
 
     // 3: Calculate the factorial of a number
-    public static String factorial(long num) {
+    public static String factorial() {
         Scanner scanner = new Scanner(System.in);
 
         boolean userAgain = true;
@@ -100,9 +103,40 @@ public class MethodsExercises {
                 userAgain = false;
             }
         } while (userAgain);
-        return "Goodbye";
+        return "Goodbye.";
     }
 
+    // 4: Create an application that simulates dice rolling.
+    public static String diceRoll () {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of sides for a pair of dice: ");
+        String userInput = scanner.nextLine();
+        int numberOfSides = Integer.parseInt(userInput);
+        numberOfSides /= 2;
+
+        boolean userAgain = true;
+
+        do {
+
+            double randomRollOne = Math.random() * numberOfSides + 1;
+            double randomRollTwo = Math.random() * numberOfSides + 1;
+            int diceOne = (int) randomRollOne;
+            int diceTwo = (int) randomRollTwo;
+
+            System.out.println("You rolled a " + diceOne + " and a " + diceTwo + ".");
+
+            System.out.println("Do you want to roll again? y/n: ");
+            String yesOrNo = scanner.nextLine();
+
+            if (yesOrNo.equals("n")) {
+                userAgain = false;
+            }
+
+        } while (userAgain);
+
+        return "Goodbye.";
+    }
 
 }
 
