@@ -60,12 +60,12 @@ public class MethodsExercises {
         int userNum = Integer.parseInt(userInput);
         boolean valid = true;
 
-        if (userNum < 1 || userNum > 10) {
+        if (userNum < min || userNum > max) {
             do {
                 System.out.print("Enter a number between 1 and 10: ");
                 userInput = scanner.next();
                 userNum = Integer.parseInt(userInput);
-                if (userNum < 1 || userNum > 10) {
+                if (userNum < min || userNum > max) {
                     valid = false;
                 } else {
                     valid = true;
