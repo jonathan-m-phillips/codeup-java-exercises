@@ -45,7 +45,7 @@ public class HighLow {
                     int guess = Integer.parseInt(userGuess);
                     if (guess < 1 || guess > 100) {
                         System.out.println("This is not a valid number. This counts as a loss of a turn.");
-                    } else if (guess > 0 && guess < 101) {
+                    } else {
                         if (guess > num && countUp != 10) {
                             System.out.println("LOWER");
                         } else if (guess < num && countUp != 10) {
