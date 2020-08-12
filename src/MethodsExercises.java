@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -12,6 +13,9 @@ public class MethodsExercises {
         System.out.println(division(8, 0));
 
         System.out.println(remainder(17, 3));
+
+
+        System.out.println(getInteger(1, 10));
 
     }
 
@@ -42,5 +46,31 @@ public class MethodsExercises {
     public static double remainder (double num1, double num2) {
         return num1 % num2;
     }
+
+
+
+    // 2: Create a method that validates that user input is in a certain range
+    public static int getInteger (int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10: ");
+        String userInput = scanner.next();
+        int userNum = Integer.parseInt(userInput);
+        boolean valid = true;
+
+        if (userNum < 1 || userNum > 10) {
+            do {
+                System.out.print("Enter a number between 1 and 10: ");
+                userInput = scanner.next();
+                userNum = Integer.parseInt(userInput);
+                if (userNum < 1 || userNum > 10) {
+                    valid = false;
+                } else {
+                    valid = true;
+                }
+            } while (!valid);
+        }
+        return userNum;
+    }
+
 
 }
