@@ -63,11 +63,12 @@ public class HighLow {
                         System.out.printf("You have %d guess left.\n", countDown);
                     }
                     if (countUp >= 10) {
+                        System.out.printf("The answer was %d.", num);
                         break;
                     }
                 } while (play);
 
-                System.out.println("Would you like to play again? y/n: ");
+                System.out.println("\nWould you like to play again? y/n: ");
                 String yesOrNo = scanner.nextLine();
                 if (yesOrNo.equals("n")) {
                     break;
