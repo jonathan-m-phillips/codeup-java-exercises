@@ -24,11 +24,10 @@ public class Person {
         jon.sayHello();
 
         Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
-        person2.setName("Jane");
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
+        Person person2 = new Person("Jane");
+        Person person3 = new Person("Doe");
+        System.out.println(person1.name);
+        System.out.println(person2.name);
+        System.out.println(person3.name);
     }
 }
