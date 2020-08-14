@@ -7,20 +7,18 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
-
     public String getString () {
+        boolean userInput = false;
         System.out.println("Enter a string.");
         String str = scanner.nextLine();
         return str;
     }
 
-
-
     public boolean yesNo () {
         System.out.println("Do you like Java? The language not the coffee.");
         String userInput = scanner.nextLine();
+
         if (userInput.toLowerCase().equals("y") || userInput.toLowerCase().equals("yes") || userInput.toLowerCase().equals("true")) {
-            boolean answer = Boolean.parseBoolean(userInput);
             System.out.println("true");
             return true;
         } else {
@@ -28,8 +26,6 @@ public class Input {
             return false;
         }
     }
-
-
 
     public int getInt (int min, int max) {
         boolean waitingInt = true;
@@ -48,8 +44,6 @@ public class Input {
         } while (waitingInt);
         return num;
     }
-
-
 
     public double getDouble (double min, double max) {
         boolean waitingDouble = true;
