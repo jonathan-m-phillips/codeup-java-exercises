@@ -3,7 +3,6 @@ package util;
 import java.util.Scanner;
 
 
-
 public class Input {
     private Scanner scanner = new Scanner(System.in);
 
@@ -19,27 +18,21 @@ public class Input {
         String userInput = scanner.nextLine();
 
         if (userInput.toLowerCase().equals("y") || userInput.toLowerCase().equals("yes") || userInput.toLowerCase().equals("true")) {
-            System.out.println("true");
             return true;
         } else {
-            System.out.println("false");
             return false;
         }
     }
 
-    public int getInt (int min, int max) {
+    public int getInt(int min, int max) {
         boolean waitingInt = true;
         int num = 0;
-
         do {
-            System.out.printf("Enter a number between %d and %d:\n", min, max);
+            System.out.printf("Enter a number from %d and %d:\n", min, max);
             String userInput = scanner.nextLine();
             num = Integer.parseInt(userInput);
-
-            if (num >= min || num <= max) {
-                System.out.println(num);
+            if (num >= min && num <= max) {
                 waitingInt = false;
-                break;
             }
         } while (waitingInt);
         return num;
@@ -49,14 +42,11 @@ public class Input {
         boolean waitingDouble = true;
         double numDouble = 0;
         do {
-            System.out.printf("Enter a number between %f and %f:\n", min, max);
+            System.out.printf("Enter a number between %.2f and %.2f:\n", min, max);
             String userInput = scanner.nextLine();
             numDouble = Double.parseDouble(userInput);
-
-            if (numDouble >= min || numDouble <= max) {
-                System.out.println(numDouble);
+            if (numDouble >= min && numDouble <= max) {
                 waitingDouble = false;
-                break;
             }
         } while (waitingDouble);
         return numDouble;
