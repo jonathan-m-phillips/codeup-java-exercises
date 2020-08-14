@@ -32,6 +32,11 @@ public class Circle {
     public double getCircumference() {
         circumference = (2 * PI * radius);
         System.out.printf("\nCircle circumference = %.2f", circumference);
+        if (count == 1) {
+            System.out.printf("\nYou made %d circle.", count);
+        } else {
+            System.out.printf("\nYou made %d circles.", count);
+        }
         return circumference;
     }
 
@@ -43,7 +48,6 @@ public class Circle {
             String yesNo = scanner.nextLine();
             if (yesNo.toLowerCase().equals("y")) {
                 count += 1;
-                System.out.printf("\nYou are on circle #%d.", count);
                 System.out.println("\nWhat is the radius of your circle in inches?");
                 String userInput = scanner.nextLine();
                 double radius = Double.parseDouble(userInput);
