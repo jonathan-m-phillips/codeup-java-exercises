@@ -2,9 +2,11 @@ package util;
 
 import java.util.Scanner;
 
+import shapes.*;
 
 public class Input {
     private Scanner scanner = new Scanner(System.in);
+    Circle circle = new Circle();
 
     public String getString () {
         boolean userInput = false;
@@ -51,4 +53,11 @@ public class Input {
         } while (waitingDouble);
         return numDouble;
     }
+
+    public void movieInput () {
+        System.out.println("What would you like to do? \n0 - exit \n1 - view all movies \n2 - view movies in the animated category " +
+                "\n3 - view movies in the drama category \n4 - view movies in the horror category " +
+                "\n5 - view movies in the scifi category\nEnter your choice: ");
+    }
+
 }
