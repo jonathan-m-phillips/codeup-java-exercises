@@ -11,6 +11,6 @@ public class InputTest {
 
         input.getInt(1, 100);
 
-        input.getDouble(1, 100);
+//        input.getDouble(1, 100);
     }
 }

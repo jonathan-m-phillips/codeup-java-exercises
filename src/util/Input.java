@@ -2,11 +2,8 @@ package util;
 
 import java.util.Scanner;
 
-import shapes.*;
-
 public class Input {
     private Scanner scanner = new Scanner(System.in);
-    Circle circle = new Circle();
 
     public String getString () {
         boolean userInput = false;
@@ -40,17 +37,18 @@ public class Input {
         return num;
     }
 
-    public double getDouble (double min, double max) {
+    public double getDouble () {
         boolean waitingDouble = true;
-        double numDouble = 0;
-        do {
-            System.out.printf("Enter a number between %.2f and %.2f:\n", min, max);
-            String userInput = scanner.nextLine();
-            numDouble = Double.parseDouble(userInput);
-            if (numDouble >= min && numDouble <= max) {
-                waitingDouble = false;
-            }
-        } while (waitingDouble);
+        double numDouble = 13;
+//        do {
+//            System.out.printf("Enter a number between %.2f and %.2f:\n", min, max);
+//            String userInput = scanner.nextLine();
+//            numDouble = Double.parseDouble(userInput);
+//            if (numDouble >= min && numDouble <= max) {
+//                waitingDouble = false;
+//            }
+//        } while (waitingDouble);
+//        return numDouble;
         return numDouble;
     }
 
