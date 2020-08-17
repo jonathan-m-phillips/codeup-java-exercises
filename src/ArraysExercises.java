@@ -1,32 +1,40 @@
 import java.util.Arrays;
-import java.util.Random;
 
 public class ArraysExercises {
 
-    public static String addPerson(String Person) {
-        System.out.println(Person);
-        return Person;
+    public static Person[] addPerson(Person[] existingPeople, Person newPeople) {
+
+        Person[] updatedPeople = Arrays.copyOf(existingPeople, existingPeople.length + 1);
+
+        updatedPeople[existingPeople.length] = newPeople;
+        return updatedPeople;
     }
 
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] person = new String [3];
+        Person[] people = new Person[3];
 //        Person jon = new Person("Jon");
 //        Person jane = new Person("Jane");
 //        Person doe = new Person("Doe");
-        person[0] = new String("Jon");
-        person[1] = new String("Zach");
-        person[2] = new String("kim");
+        people[0] = new Person("Jon");
+        people[1] = new Person("Zach");
+        people[2] = new Person("kim");
 
 
 
-        for (String people : person) {
-            System.out.println(people);
+        System.out.println("Adding a new person: ");
+        Person erin = new Person("Erin");
+        Person[] updatedPeople = new Person[people.length + 1];
+
+        for (Person person : updatedPeople) {
+            System.out.println(person);
         }
 
-        addPerson("Bob");
+        System.out.println(Arrays.toString(addPerson(people, erin)));
+
+//        addPerson("Bob");
 
     }
 }
