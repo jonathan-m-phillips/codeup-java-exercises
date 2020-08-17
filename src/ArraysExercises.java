@@ -12,19 +12,21 @@ public class ArraysExercises {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
 
-        String[] Person = new String [3];
-        Person jon = new Person("Jon");
-        Person jane = new Person("Jane");
-        Person doe = new Person("Doe");
-        Person[0] = jon.getName();
-        Person[1] = jane.getName();
-        Person[2] = doe.getName();
+        String[] person = new String [3];
+//        Person jon = new Person("Jon");
+//        Person jane = new Person("Jane");
+//        Person doe = new Person("Doe");
+        person[0] = new String("Jon");
+        person[1] = new String("Zach");
+        person[2] = new String("kim");
 
-        for (String person : Person) {
-            System.out.println(person);
+
+
+        for (String people : person) {
+            System.out.println(people);
         }
 
-        addPerson("Zach");
+        addPerson("Bob");
 
     }
 }
