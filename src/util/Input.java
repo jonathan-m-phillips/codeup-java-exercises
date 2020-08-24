@@ -37,18 +37,17 @@ public class Input {
         return num;
     }
 
-    public double getDouble () {
+    public double getDouble (double min, double max) {
         boolean waitingDouble = true;
-        double numDouble = 13;
-//        do {
-//            System.out.printf("Enter a number between %.2f and %.2f:\n", min, max);
-//            String userInput = scanner.nextLine();
-//            numDouble = Double.parseDouble(userInput);
-//            if (numDouble >= min && numDouble <= max) {
-//                waitingDouble = false;
-//            }
-//        } while (waitingDouble);
-//        return numDouble;
+        double numDouble;
+        do {
+            System.out.printf("Enter a number between %.2f and %.2f:\n", min, max);
+            String userInput = scanner.nextLine();
+            numDouble = Double.parseDouble(userInput);
+            if (numDouble >= min && numDouble <= max) {
+                waitingDouble = false;
+            }
+        } while (waitingDouble);
         return numDouble;
     }
 

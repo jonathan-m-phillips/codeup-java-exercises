@@ -9,7 +9,7 @@ public class CircleApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Input input = new Input();
-        double radius = input.getDouble();
+        double radius = input.getDouble(1, 10);
 
         Circle circle = new Circle (radius);
         System.out.printf("radius: %.2f\n", circle.userRadius());
