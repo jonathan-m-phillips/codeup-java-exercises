@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -5,7 +6,7 @@ import java.util.Scanner;
 public class GroceryList {
 
     public static void main(String[] args) {
-        HashMap<String, HashMap<String, Integer>> groceryList = new HashMap<>();
+        HashMap<String, HashMap> groceryList = new HashMap<>();
         HashMap<String, Integer> items = new HashMap<>();
 
 
@@ -49,6 +50,7 @@ public class GroceryList {
                     userInput = scanner.nextLine();
                     int userItems = Integer.parseInt(userInput);
                     items.put(userItem, userItems);
+                    items.put(userItem, userItems);
                     groceryList.put("drinks", items);
                 } else if (userCategory == 4) {
                     System.out.println("Enter the name of the item: ");
@@ -57,6 +59,7 @@ public class GroceryList {
                     System.out.println("Quantity of this item?");
                     userInput = scanner.nextLine();
                     int userItems = Integer.parseInt(userInput);
+                    items.put(userItem, userItems);
                     items.put(userItem, userItems);
                     groceryList.put("vegetables", items);
                 }
@@ -80,9 +83,10 @@ public class GroceryList {
             } while (userAgrees);
         }
 
-            for (Map.Entry<String, HashMap<String, Integer>> entry : groceryList.entrySet()) {
+            for (Map.Entry<String, HashMap> entry : groceryList.entrySet()) {
+                System.out.println(entry.getKey() + ": " + entry.getValue());
                 for (Map.Entry<String, Integer> entry2 : items.entrySet()) {
-                    System.out.println(entry.getKey() + " : " + entry2.getKey() + ", " + entry2.getValue());
+                    System.out.println(entry.getKey() + ", " + entry2.getKey() + " " + entry2.getValue());
                 }
             }
 
