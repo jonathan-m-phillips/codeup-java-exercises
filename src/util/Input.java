@@ -18,26 +18,25 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
+        int num = 0;
         try {
-            int num = Integer.valueOf(getString());
-            return num;
-        } catch (NumberFormatException e) {
+            num = Integer.valueOf(getString());
+        } catch (Exception e) {
             System.out.println("that isn't an integer");
         }
 
-        return min;
+        return num;
     }
 
     public double getDouble(double min, double max) {
-        double numDouble;
+        double numDouble = 0;
         try {
             numDouble = Double.valueOf(getString());
             System.out.println(numDouble);
-            return numDouble;
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("that isn't a double");
         }
-        return min;
+        return numDouble;
     }
 
     public void movieInput() {
